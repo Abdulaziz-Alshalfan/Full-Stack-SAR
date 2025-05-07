@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-sar-backend
+    runtime: python
+    buildCommand: ""
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://admin:w6rzUGHm3JZfr1rb@aicluster.9dxbbtn.mongodb.net/?retryWrites=true&w=majority&appName=aiCluster
+    plan: free
+    region: oregon
